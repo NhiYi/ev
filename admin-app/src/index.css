@@ -1,0 +1,19 @@
+:root{--bg:#f6f8fa;--accent:#0ea5a3;--primary:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:var(--bg);color:#0f172a}
+.admin-root{display:flex}
+.sidebar{width:220px;background:#0f172a;color:white;min-height:100vh;padding:20px}
+.sidebar .logo img{width:160px}
+.sidebar nav{margin-top:20px;display:flex;flex-direction:column;gap:8px}
+.sidebar nav a{color:#cbd5e1;text-decoration:none}
+.admin-main{flex:1}
+.topbar{display:flex;justify-content:space-between;padding:12px 20px;background:white;align-items:center}
+.admin-content{padding:20px}
+.card{background:white;padding:12px;border-radius:8px;box-shadow:0 1px 6px rgba(2,6,23,0.06);margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.auth-page{display:flex;align-items:center;justify-content:center;height:100vh}
+.auth-form{background:white;padding:20px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06);min-width:320px}
+.auth-form input{display:block;width:100%;padding:8px;margin-bottom:8px;border-radius:6px;border:1px solid #e6eef4}
+.btn{padding:8px 12px;border-radius:6px;background:#e2e8f0;color:#0f172a;border:none;cursor:pointer}
+.btn.primary{background:var(--primary);color:white}
+.container{max-width:1100px;margin:20px auto;padding:0 16px}
