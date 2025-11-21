@@ -16,7 +16,5 @@ app.use("/vehicles", vehicleRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log(`Station Service running on port ${process.env.PORT}`);
-
-  // Seed only first time
   seedData();
 });
