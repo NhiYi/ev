@@ -1,0 +1,225 @@
+{
+  "info": {
+    "name": "EV Rental System - Multi Service API",
+    "_postman_id": "ev-rental-system-12345",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Analytics Service",
+      "item": [
+        {
+          "name": "Log Event",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:4004/analytics/event",
+              "host": [
+                "http://localhost:4004/analytics/event"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"payment.completed\",\n  \"payload\": {\n    \"amount\": 120000,\n    \"stationId\": 1\n  }\n}"
+            }
+          }
+        },
+        {
+          "name": "Revenue By Station",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:4004/analytics/revenue-by-station",
+              "host": [
+                "http://localhost:4004/analytics/revenue-by-station"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Top Vehicles",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:4004/analytics/top-vehicles",
+              "host": [
+                "http://localhost:4004/analytics/top-vehicles"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Heatmap",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:4004/analytics/heatmap",
+              "host": [
+                "http://localhost:4004/analytics/heatmap"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Staff Performance",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:4004/analytics/staff-performance",
+              "host": [
+                "http://localhost:4004/analytics/staff-performance"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Rental Service",
+      "item": [
+        {
+          "name": "Create Rental",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5004/api/rentals",
+              "host": [
+                "http://localhost:5004/api/rentals"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": 1,\n  \"vehicleId\": 3,\n  \"stationId\": 2\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Payment Service",
+      "item": [
+        {
+          "name": "Create Payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5005/payments",
+              "host": [
+                "http://localhost:5005/payments"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rentalId\": 10,\n  \"amount\": 150000\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Station Service",
+      "item": [
+        {
+          "name": "Get Stations",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5010/stations",
+              "host": [
+                "http://localhost:5010/stations"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Vehicles",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5010/vehicles",
+              "host": [
+                "http://localhost:5010/vehicles"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Transfer Vehicle",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5010/vehicles/transfer",
+              "host": [
+                "http://localhost:5010/vehicles/transfer"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vehicleId\": 2,\n  \"fromStation\": 1,\n  \"toStation\": 3\n}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
